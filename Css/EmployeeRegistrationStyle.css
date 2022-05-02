@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 0px 20px 200px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #82a70c;
+}
+
+header img {
+  height: 45px;
+  border: 1px solid #42515f;
+  margin-right: 5px;
+  background-color: #f7f7f7;
+}
+
+header div h3 {
+  display: flex;
+  flex-flow: column wrap;
+  font-weight: bold;
+  line-height: 1.8ch;
+}
+
+header div h3 span {
+  color: #42515f;
+}
+
+.mainSection {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  max-width: 1125px;
+  border: 1px solid #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+form {
+  width: 85%;
+  padding: 44px 60px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.formHeader h3 {
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #42515f;
+  letter-spacing: 0px;
+}
+
+.rowContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  min-width: 140px;
+}
+
+.labels {
+  margin-right: 20px;
+  margin-left: 12px;
+}
+
+.slider {
+  min-width: 350px;
+}
+
+.salaryContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  margin-right: 12px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.text {
+  font-size: 16px;
+  color: #42515f;
+  font-family: "Roboto";
+  opacity: 1;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input{
+  cursor: pointer;
+}
+
+.profile-radio-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-radio-content label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile {
+  width: 40px;
+  margin-left: 12px;
+}
+
+.gender {
+  margin-left: 12px;
+}
+
+.departmentContentOptions {
+  display: none;
+}
+
+select,
+.button {
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-right: 12px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: "Roboto";
+  background-color: transparent;
+  color: #42515f;
+  resize: vertical;
+  cursor: pointer;
+  transform: all 5s ease;
+}
+
+select:hover,
+button:hover {
+  background-color: #42515f;
+  color: #ffffff;
+}
+
+textarea {
+  width: 700px;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.button {
+  margin-top: 25px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.buttonParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.submitButton:hover {
+  background-color: #82a70c;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  background-color: grey;
+  border: 1px solid grey;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+input[type=radio]:disabled{
+  cursor: not-allowed; 
+}
+
+.errorText{
+  padding: 10px ;
+  text-align: center;
+  color: tomato;
+  font-style: italic;
+}
+
+/* for devices upto 400px */
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 20px 0px 20px 50px;
+  }
+
+  header img {
+    height: 25px;
+  }
+
+  header div h3 {
+    font-size: 14px;
+  }
+
+  .mainSection {
+    max-width: 360px;
+  }
+
+  form {
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  .formHeader h3 {
+    font-size: 16px;
+  }
+
+  .label {
+    min-width: 100px;
+  }
+
+  .labels {
+    margin-right: 6px;
+    margin-left: 6px;
+  }
+
+  .slider {
+    min-width: 50%;
+  }
+
+  label {
+    padding: 6px 6px 6px 0;
+    display: inline-block;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .input {
+    width: 200px;
+    padding: 6px;
+  }
+  .profile,
+  .gender {
+    width: 30px;
+    margin-left: 4px;
+  }
+
+  input[type="radio"] {
+    height: 10px;
+  }
+  .gender {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .departmentContentCheckbox {
+    display: none;
+  }
+
+  .departmentContentOptions {
+    display: block;
+  }
+
+  select,
+  .button {
+    padding: 6px;
+    margin-right: 6px;
+    width: 60px;
+  }
+
+  .button{
+    color: #42515f;
+  }
+
+  .buttonParent {
+    padding-right: 30px;
+  }
+
+  .departmentSelect {
+    padding: 6px;
+    width: 100px;
+  }
+
+  textarea {
+    width: 200px;
+    height: 50px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .submitButton {
+    background-color: #82a70c;
+    color: #ffffff;
+  }
+}
+
+
+/* for devices upto 600px */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 20px 0px 20px 50px;
+  }
+
+  header img {
+    height: 25px;
+  }
+
+  header div h3 {
+    font-size: 14px;
+  }
+
+  .mainSection {
+    max-width: 360px;
+  }
+
+  form {
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  .formHeader h3 {
+    font-size: 16px;
+  }
+
+  .label {
+    min-width: 100px;
+  }
+
+  .labels {
+    margin-right: 6px;
+    margin-left: 6px;
+  }
+
+  .slider {
+    min-width: 50%;
+  }
+
+  label {
+    padding: 6px 6px 6px 0;
+    display: inline-block;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .input {
+    width: 200px;
+    padding: 6px;
+  }
+  .profile,
+  .gender {
+    width: 30px;
+    margin-left: 4px;
+  }
+
+  input[type="radio"] {
+    height: 10px;
+  }
+  .gender {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .departmentContentCheckbox {
+    display: none;
+  }
+
+  .departmentContentOptions {
+    display: block;
+  }
+
+  select,
+  .button {
+    padding: 6px;
+    margin-right: 6px;
+    width: 60px;
+  }
+
+  .button{
+    color: #42515f;
+  }
+
+  .buttonParent {
+    padding-right: 30px;
+  }
+
+  .departmentSelect {
+    padding: 6px;
+    width: 100px;
+  }
+
+  textarea {
+    width: 200px;
+    height: 50px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .submitButton {
+    background-color: #82a70c;
+    color: #ffffff;
+  }
+}
